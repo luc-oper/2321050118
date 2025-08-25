@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      h2 {
+        color: yellowgreen;
+      }
+      h1 {
+        color: red;
+      }
+      p {
+        color: blue;
+        background-color: black;
+      }
+      a:link {
+        color: red;
+      }
+      h3:hover {
+        cursor: pointer;
+        background-color: yellow;
+      }
+    </style>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+
+    <title>Bài 4</title>
+  </head>
+  <body>
+    <h1 style="color: aqua; background-color: aliceblue">Inline Style</h1>
+    <h2 class="bg">Internal Style</h2>
+    <!-- external tạo file css riêng -->
+    <h3 class="bg">External Style</h3>
+
+    <h3 id="title">Bài học CSS</h3>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <!-- h,p theo khối block -->
+    <!-- h2. class thì chỉ chọn thẻ h2 -->
+    <!-- Contexual:  div b thì chỉ ảnh hưởng bởi div bọc vào -->
+    <a href="https://www.google.com/">Google</a>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+  </body>
+</html>
