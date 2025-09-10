@@ -93,6 +93,10 @@ main {
   width: 65%;
 }
 
+.hd {
+  
+}
+
 .a {
   text-decoration: none;
 }
@@ -104,6 +108,7 @@ main {
   display: flex;
 }
 .hours {
+  text-align: left;
 }
 .hd-nd {
   list-style: none;
