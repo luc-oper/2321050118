@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="scrip.js"></script>
+  </head>
+  <body>
+    <script>
+      // internal
+      document.writeln("helloworld!  " + "112" + "<br>");
+
+      // khai báo biến let or var: var name=value;
+      let hoTen = "Nguyễn Đại Lực  <br>";
+      document.writeln(hoTen);
+      //Nối chuỗi + "123" hoặc + <br>
+      // toán tử
+      let soThuNhat = "5";
+      let soThuHai = 5;
+      let ketQua;
+      //phép cộng
+      //   ketQua = soThuNhat / soThuHai;
+
+      //tăng ++
+
+      //   soThuNhat /= soThuHai;
+      // sothunhat=sothunhat-sothuhai
+
+      //   document.writeln(soThuNhat);
+      //   window.alert(ketQua)
+      // so sánh == , != , === so sánh cả giá trị và kiểu dữ liệu !== : khác nhau về cả kiểu dữ liệu và giá trị
+      let thongTinSinhVien = {
+        hoTen: "Nguyễn Đại Lực",
+        mssv: "2321050118",
+        age: 20,
+        sex: true,
+        lop:"developaplicationweb"
+      }
+
+      let address = {
+        city: "Hà Nội",
+        xa: "Vật Lại",
+        street: "ABC",
+        soNha: "34637"
+      }
+      // nối 2 object lại với nhau bằng cú pháp: object1.name=object2;
+      thongTinSinhVien.diaChi=address;
+
+      document.writeln("Xin chào "+ thongTinSinhVien.hoTen +" "+ thongTinSinhVien.age + " tuổi" + " thành phố " + thongTinSinhVien.diaChi.city +" "+ thongTinSinhVien.diaChi.soNha+" ");
+      
+      let namnay=2025;
+      document.writeln(" Bạn"+ thongTinSinhVien.hoTen+ " Sinh năm" + namnay-thongTinSinhVien.age)
+    </script>
+  </body>
+</html>
