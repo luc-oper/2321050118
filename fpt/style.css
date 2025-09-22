@@ -112,49 +112,48 @@ main {
 .phim img {
   width: 100%;
 }
+main img{
+ width: 15%;
+}
 
+ 
 footer {
-  background-color: black;
+  background-color: #131314;
   width: 100%;
   color: white;
   font-family: "SFProDisplay", Arial, sans-serif;
 }
 
+.footer-content {
+  margin: auto;
+  justify-content: space-between;
+  width: 70%;
+  background-color: black;
+}
+
 .footer-container {
-  
   display: flex;
-   
+  gap: 15px;
   flex-wrap: wrap;
-  justify-content: center;
-   
-   
 }
 
 .footer-tittle {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin: auto;
-  
+   
 }
 
- 
- 
 .footer-tittle a:hover {
   color: orange;
 }
 
-.logo {
-  width: 140px;
-   
+.logon {
+  width: 150px;
 }
 
 .social img {
   width: 24px;
-   
-}
-.social a:hover {
-  color :orange
 }
  
 
@@ -163,5 +162,4 @@ footer {
   padding: 20px 15px;
   font-size: 13px;
   color: white;
-  
 }
