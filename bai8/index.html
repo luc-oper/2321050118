@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let thongTinDonHang = {
+        maDonHang: "M0123",
+        thongTinKhachHang: {
+          hoTen: "MinhHieu",
+          soDienThoai: "0987654321",
+          trangThaiThanhVienThanThiet: false,
+        },
+        danhSachSanPham: {
+          sp01: {
+            maSanPham: "1",
+            tenSanPham: "Matcha",
+            soLuong: 10,
+            giaTien: 30000,
+          },
+          sp02: {
+            maSanPham: "2",
+            tenSanPham: "Cà phê",
+            soLuong: 10,
+            giaTien: 25000,
+          },
+          sp03: {
+            maSanPham: "3",
+            tenSanPham: "Trà sữa",
+            soLuong: 15,
+            giaTien: 20000,
+          },
+        },
+        thanhToanThanhCong: true,
+        diaChiGiaoHang: "Đông Ngạc",
+      };
+      let sumsp1 =
+        thongTinDonHang.danhSachSanPham.sp01.soLuong *
+        thongTinDonHang.danhSachSanPham.sp01.giaTien;
+      let sumsp2 =
+        thongTinDonHang.danhSachSanPham.sp02.soLuong *
+        thongTinDonHang.danhSachSanPham.sp02.giaTien;
+      let sumsp3 =
+        thongTinDonHang.danhSachSanPham.sp03.soLuong *
+        thongTinDonHang.danhSachSanPham.sp03.giaTien;
+      let sum = sumsp1 + sumsp2 + sumsp3;
+
+      //   document.writeln(sum+"<br>");
+
+      //   document.writeln("độ dài mã đơn hàng : "+ thongTinDonHang.maDonHang[3]);
+      //phương thức string .length(độ dài chuỗi) myString
+      //   var myString = "Hello Lực";
+      //   //silce lấy từ bắt đầu dến n-1
+      //   //   document.writeln(myString.slice(1,4));
+      //   //replace thay thế chuỗi "hello" bằng "hi"
+      //   document.writeln(myString.replace("Hello","Hi"));
+
+      // lowcase->upcase
+      //   document.writeln(myString.toUpperCase());
+
+      // Tìm kiếm có tồn tại trong chuỗi không indexOf trả ra đầu tiên ký tự nếu không là -1
+      //   document.writeln(myString.indexOf('e'));
+
+      //   // includes trả ra true hay false
+      //   document.writeln(myString.includes('e')+"<br>");
+
+      // Tách chuỗi thành mảng split('') không truyền tự tách ra truyền cách sẽ tách ra hay 'l' tự động tách
+      //   document.writeln(myString.split('')+"<br>");
+      // Mảng
+
+      //   let list=["Anh","Pháp" , "Đức", "Ý","Tây Ban Nha"];
+      //   //startsWith kiểm tra có chuỗi trong phần tử hay không.
+      //   document.writeln(list[1].startsWith("A"));
+      // Xử lý kiểm number
+    //   let so = "123";
+    //   document.writeln(typeof Number(so));
+    //   document.writeln(typeof so);
+    //   //ví dụ
+    //   document.writeln(parseFloat(10));
+    //   document.writeln(parseInt(10.66));
+    //   // định dạng số sau dấu chấm toFixed
+    //   pi=3.14159
+    //   document.writeln(pi.toFixed(2)) ;
+    //   // isNAN: kiểm tra xem một giá trị có phải là NaN(not a number)
+    //   // isFinite : kiểm tra có phải số hữu hạn không.
+
+      // hàm date 
+      let today=new Date();
+      document.writeln(today.getHours());
+      
+
+
+
+    </script>
+  </body>
+</html>

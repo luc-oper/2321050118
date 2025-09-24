@@ -9,11 +9,11 @@
   <body>
     <script>
       // internal
-      document.writeln("helloworld!  " + "112" + "<br>");
+      // document.writeln("helloworld!  " + "112" + "<br>");
 
       // khai báo biến let or var: var name=value;
-      let hoTen = "Nguyễn Đại Lực  <br>";
-      document.writeln(hoTen);
+      // let hoTen = "Nguyễn Đại Lực  <br>";
+      // document.writeln(hoTen);
       //Nối chuỗi + "123" hoặc + <br>
       // toán tử
       let soThuNhat = "5";
@@ -35,22 +35,41 @@
         mssv: "2321050118",
         age: 20,
         sex: true,
-        lop:"developaplicationweb"
-      }
+        lop: "developaplicationweb",
+      };
 
       let address = {
         city: "Hà Nội",
         xa: "Vật Lại",
         street: "ABC",
-        soNha: "34637"
-      }
+        soNha: "34637",
+      };
       // nối 2 object lại với nhau bằng cú pháp: object1.name=object2;
-      thongTinSinhVien.diaChi=address;
+      thongTinSinhVien.diaChi = address;
 
-      document.writeln("Xin chào "+ thongTinSinhVien.hoTen +" "+ thongTinSinhVien.age + " tuổi" + " thành phố " + thongTinSinhVien.diaChi.city +" "+ thongTinSinhVien.diaChi.soNha+" ");
+      // document.writeln(
+      //   "Xin chào " +
+      //     thongTinSinhVien.hoTen +
+      //     " " +
+      //     thongTinSinhVien.age +
+      //     " tuổi" +
+      //     " thành phố " +
+      //     thongTinSinhVien.diaChi.city +
+      //     " " +
+      //     thongTinSinhVien.diaChi.soNha +
+      //     " "
+      // );
+
+      // let namnay = 2025;
+      // document.writeln(
+      //   " Bạn" +
+      //     thongTinSinhVien.hoTen +
+      //     " Sinh năm" +
+      //    ( namnay - thongTinSinhVien.age)
+      // );
+      // ép kiểu parseInt 
+
       
-      let namnay=2025;
-      document.writeln(" Bạn"+ thongTinSinhVien.hoTen+ " Sinh năm" + namnay-thongTinSinhVien.age)
     </script>
   </body>
 </html>
