@@ -1,56 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bài 11</title>
-</head>
-<body>
-    <!-- Tính điểm sinh viên 3 điểm A,B,C tính điểm tb  -->
-     
+  </head>
+  <body>
+    <div>
+      Điểm A: <input type="number" id="diemA" placeholder="nhập điểm A" />
+    </div>
+    <div>
+      Điểm B: <input type="number" id="diemB" placeholder="nhập điểm B" />
+    </div>
+    <div>
+      Điểm C: <input type="number" id="diemC" placeholder="nhập điểm C" />
+    </div>
 
-    <div>
-       Điểm A: <input type="number" id="diemA" placeholder="nhập điểm A">
-    </div>
-    <div>
-       Điểm B: <input type="number" id="diemB" placeholder="nhập điểm B">
-    </div>
-    <div>
-       Điểm C: <input type="number" id="diemC" placeholder="nhập điểm C">
-    </div>
-   
     <button onclick="xemKetQua()">Tính điểm</button>
-    <div>
-        Kết Quả : <input type="text" id="ketqua">
-    </div>
-     <script>
-        function xemKetQua(){
-            let diemA = parseFloat(document.getElementById("diemA").value);
-            let diemB = parseFloat(document.getElementById("diemB").value);
-            let diemC = parseFloat(document.getElementById("diemC").value);
-            document.writeln(diemA)
-            sum(diemA,diemB,diemC);
-            document.getElementById("ketqua").value = sum;
-             
-        }
+    <div>Kết Quả : <input type="text" id="ketqua" /></div>
 
+    <script>
+      function xemKetQua() {
+        let diemA = parseFloat(document.getElementById("diemA").value);
+        let diemB = parseFloat(document.getElementById("diemB").value);
+        let diemC = parseFloat(document.getElementById("diemC").value);
 
-        function sum(a,b,c){
-            if( ktra(a) || ktra(b) || ktra(c) ) 
-                return a*0.6 + b*0.3 + c*0.1;
-            
-        }
-         
-        function ktra(num){
-            if(typeof(num) == "number" && num>=0 && num<=10) 
-                return true;
-            else 
-                return false;
-        }
-        
+        let kq = sum(diemA, diemB, diemC);
+        document.getElementById("ketqua").value = kq.toFixed(2);
+      }
 
+      function sum(a, b, c) {
+        if (ktra(a) && ktra(b) && ktra(c)) 
+          return a * 0.6 + b * 0.3 + c * 0.1;
+        else 
+          return "Nhập lại";
+      }
 
-
-     </script>
-</body>
+      function ktra(num) {
+        if (typeof num == "number" && num >= 0 && num <= 10) 
+          return true;
+        else 
+          return false;
+      }
+    </script>
+  </body>
 </html>
