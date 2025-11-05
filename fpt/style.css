@@ -60,6 +60,7 @@ a:hover {
   padding: 10px 20px;
   width: 100px;
   border-radius: 10px;
+  
 }
 
 .btn {
@@ -69,6 +70,19 @@ a:hover {
   padding: 10px 10px;
   width: 100px;
   border-radius: 10px;
+  left: 20px;
+  bottom: 20px;
+  margin-top: 20px;
+   
+}
+.banner {
+  position: relative;
+}
+
+.conten {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
 }
 
 .dangnhap {
@@ -109,6 +123,11 @@ main {
 
 .tentheloai {
   margin: 20px;
+}
+
+.trailer iframe {
+  max-width: 100%;
+  height: 100x;
 }
 
 .danhsach {

@@ -39,12 +39,24 @@
       </div>
       <div class="container">
         <div>
-          <div class="banner" style="display: flex; justify-content: center">
+          <div class="banner">
             <img class="im" src="640x396-muado.jpg" alt="" />
+
+            <div class="conten">
+              <div class="movie-details">
+                <span class="type">Phim chiếu rạp</span>    -- 
+                <span class="nation">Việt Nam</span>
+              </div>
+
+              <button class="btn" onclick="trailer()">Xem ngay</button>
+            </div>
           </div>
-          <div class="trailer">
+          <div
+            class="trailer"
+            style="display: flex; justify-content: center; display: none"
+          >
             <iframe
-              width="1039"
+              width="1000"  
               height="584"
               src="https://www.youtube.com/embed/UEqjUBGjvwI"
               title="MƯA ĐỎ - TEASER TRAILER #2 | DỰ KIẾN KHỞI CHIẾU: 22.8.2025"
@@ -54,9 +66,7 @@
               allowfullscreen
             ></iframe>
           </div>
-          <div>
-            <button class="btn" onclick="trailer()">Xem ngay</button>
-          </div>
+
           <div style="display: flex; justify-content: center">
             <img class="qc" src="qc.jpg" alt="" />
           </div>
@@ -64,31 +74,31 @@
         <div class="theloai">
           <div class="tentheloai">Phim chiếu rạp</div>
           <div class="danhsach">
-            <div class="phim">
-              <div class="anh">
-                <img src="./img/khong.jpg" alt="" />
-              </div>
-              <div class="ten">Vây hãm trên không</div>
-            </div>
             <div onclick="chooseFilm(1)" class="phim">
+              <div class="anh">
+                <img src="350x495-muado.jpg" alt="" />
+              </div>
+              <div class="ten">Mưa đỏ</div>
+            </div>
+            <div onclick="chooseFilm(2)" class="phim">
               <div class="anh">
                 <img src="./img/den.png" alt="" />
               </div>
               <div class="ten">Quái vật đen</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(3)" class="phim">
               <div class="anh">
-                <img src="./img/dong.jpg" alt="" />
+                <img src="./img/quyong.webp" alt="" />
               </div>
-              <div class="ten">Dòng máu anh hùng</div>
+              <div class="ten">Quý ông Plankton</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(4)" class="phim">
               <div class="anh">
                 <img src="./img/tansat.jpg" alt="" />
               </div>
               <div class="ten">sát thủ nhân tạo 2</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(5)" class="phim">
               <div class="anh">
                 <img src="./img/ve.png" alt="" />
               </div>
@@ -99,31 +109,31 @@
         <div class="theloai">
           <div class="tentheloai">Phim điện ảnh hay nhất</div>
           <div class="danhsach">
-            <div class="phim">
+            <div onclick="chooseFilm(6)" class="phim">
               <div class="anh">
                 <img src="./img2/bogia.png" alt="" />
               </div>
               <div class="ten">Bố Già</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(7)" class="phim">
               <div class="anh">
                 <img src="./img2/ma.png" alt="" />
               </div>
               <div class="ten">Cưới ma giải hạn</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(8)" class="phim">
               <div class="anh">
                 <img src="./img2/codau.png" alt="" />
               </div>
               <div class="ten">Cô dâu hào môn</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(9)" class="phim">
               <div class="anh">
-                <img src="./img2/khicon.png" alt="" />
+                <img src="./img/ngng.jpg" alt="" />
               </div>
-              <div class="ten">Khi con là nhà</div>
+              <div class="ten">Nghi ngờ</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(10)" class="phim">
               <div class="anh">
                 <img src="./img2/bau.png" alt="" />
               </div>
@@ -134,31 +144,31 @@
         <div class="theloai">
           <div class="tentheloai">Phim hành động gay cấn</div>
           <div class="danhsach">
-            <div class="phim">
+            <div onclick="chooseFilm(11)" class="phim">
               <div class="anh">
                 <img src="./img2/kungfu.png" alt="" />
               </div>
               <div class="ten">Tuyệt đỉnh kung fu</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(12)" class="phim">
               <div class="anh">
                 <img src="./img2/gangto.png" alt="" />
               </div>
               <div class="ten">Găng tơ tái xuất</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(13)" class="phim">
               <div class="anh">
                 <img src="./img2/mynu.png" alt="" />
               </div>
               <div class="ten">Đặc nhiệm mỹ nhân</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(14)" class="phim">
               <div class="anh">
                 <img src="./img2/viendan.png" alt="" />
               </div>
               <div class="ten">Viên đạn ma</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(15)" class="phim">
               <div class="anh">
                 <img src="./img2/long.png" alt="" />
               </div>
@@ -169,105 +179,105 @@
         <div class="theloai">
           <div class="tentheloai">Phim tâm lý đỉnh cao</div>
           <div class="danhsach">
-            <div class="phim">
+            <div onclick="chooseFilm(16)" class="phim">
               <div class="anh">
-                <img src="350x495-muado.jpg" alt="" />
+                <img src="./img2/co-gai-tu-qua-khu.jpg" alt="" />
               </div>
-              <div class="ten">Lời chào cuối cùng</div>
+              <div class="ten">Cô gái từ quá khư</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(17)" class="phim">
               <div class="anh">
-                <img src="350x495-muado.jpg" alt="" />
+                <img src="./img2/hai-muoi-fpt-play.jpg" alt="" />
               </div>
-              <div class="ten">Tiệc trăng máu</div>
+              <div class="ten">Hai muối</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(18)" class="phim">
               <div class="anh">
-                <img src="350x495-muado.jpg" alt="" />
+                <img src="./img2/mat-troi-con-o-dau.jpg" alt="" />
               </div>
-              <div class="ten">Truy lùng</div>
+              <div class="ten">Mặt trời con ở đâu</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(19)" class="phim">
               <div class="anh">
-                <img src="350x495-muado.jpg" alt="" />
+                <img src="./img2/tro-tan-ruc-ro-fpt.jpg" alt="" />
               </div>
-              <div class="ten">Chị chị em em</div>
+              <div class="ten">tro tàn rực rỡ</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(20)" class="phim">
               <div class="anh">
-                <img src="350x495-muado.jpg" alt="" />
+                <img src="./img2/trinh-cong-son-fptjpg.jpg" alt="" />
               </div>
-              <div class="ten">Án mạng lầu 4</div>
+              <div class="ten">Trịnh Công Sơn</div>
             </div>
           </div>
         </div>
         <div class="theloai">
           <div class="tentheloai">Phim kinh dị</div>
           <div class="danhsach">
-            <div class="phim">
+            <div onclick="chooseFilm(21)" class="phim">
               <div class="anh">
-                <img src="350x495-muado.jpg" alt="" />
+                <img src="./img2/quynguyent.webp" alt="" />
               </div>
               <div class="ten">Quỷ nguyệt 2</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(22)" class="phim">
               <div class="anh">
-                <img src="350x495-muado.jpg" alt="" />
+                <img src="./img2/thamtukien.webp" alt="" />
               </div>
-              <div class="ten">Xưởng 13</div>
+              <div class="ten">Thám tử kiên: kỳ án không đầu</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(23)" class="phim">
               <div class="anh">
-                <img src="350x495-muado.jpg" alt="" />
+                <img src="./img2/doatxac.webp" alt="" />
               </div>
-              <div class="ten">Nữ tu bóng tối</div>
+              <div class="ten">Đoạt xác</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(24)" class="phim">
               <div class="anh">
-                <img src="350x495-muado.jpg" alt="" />
+                <img src="./img2/quattrung.webp" alt="" />
               </div>
-              <div class="ten">Năm,mười,mười lăm</div>
+              <div class="ten">Quật mộ trùng ma</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(25)" class="phim">
               <div class="anh">
-                <img src="350x495-muado.jpg" alt="" />
+                <img src="./img2/hamtu.webp" alt="" />
               </div>
-              <div class="ten">Xác chết quỷ ám</div>
+              <div class="ten">Hàm tử thần</div>
             </div>
           </div>
         </div>
         <div class="theloai">
           <div class="tentheloai">Phim hài đặc sắc</div>
           <div class="danhsach">
-            <div class="phim">
+            <div onclick="chooseFilm(26)" class="phim">
               <div class="anh">
-                <img src="350x495-muado.jpg" alt="" />
+                <img src="./img2/nhagia.webp" alt="" />
               </div>
               <div class="ten">Nhà gia tiên</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(27)" class="phim">
               <div class="anh">
-                <img src="350x495-muado.jpg" alt="" />
+                <img src="./img2/chi13.webp" alt="" />
               </div>
               <div class="ten">chị mười 13</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(28)" class="phim">
               <div class="anh">
-                <img src="350x495-muado.jpg" alt="" />
+                <img src="./img2/oldgrild.webp" alt="" />
               </div>
               <div class="ten">Gái già lắm chiêu</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(29)" class="phim">
               <div class="anh">
-                <img src="350x495-muado.jpg" alt="" />
+                <img src="./img2/congtu.webp" alt="" />
               </div>
-              <div class="ten">Hello cô ba</div>
+              <div class="ten">Công tử bạc liêu</div>
             </div>
-            <div class="phim">
+            <div onclick="chooseFilm(30)" class="phim">
               <div class="anh">
-                <img src="350x495-muado.jpg" alt="" />
+                <img src="./img2/trang.webp" alt="" />
               </div>
-              <div class="ten">1990</div>
+              <div class="ten">Trạng Quỳnh</div>
             </div>
           </div>
         </div>
