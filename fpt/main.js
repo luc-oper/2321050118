@@ -3,41 +3,56 @@ let listFilm = [
     id: 1,
     name: "Mưa  đỏ",
     type: "Phim chiếu",
-    banner: "./09_68bfea5810013f0001205210.jpg",
-    trailer: "https://www.youtube.com/watch?v=UEqjUBGjvwI&list=PPSV",
+    banner: "./640x396-muado.jpg",
+    trailer:
+      '<iframe width="1039" height="584" src="https://www.youtube.com/embed/BD6PoZJdt_M" title="MƯA ĐỎ | OFFICIAL TRAILER | Khởi chiếu tại rạp: 22.08.2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
     nation: "Việt Nam",
+    year: "2025",
+    hours: "2 giờ ",
   },
   {
     id: 2,
     name: "Quái vật đen",
     type: "Phim chiếu rạp",
     banner: "./img/denjpg.jpg",
-    trailer: "https://www.youtube.com/watch?v=UEqjUBGjvwI&list=PPSV",
+    trailer:
+      ' trailer: "<iframe width="1039" height="584" src="https://www.youtube.com/embed/OVlEPPGSavQ" title="QUÁI VẬT ĐEN | Trailer | Dự kiến khởi chiếu: 12.05.2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>",',
     nation: "Mỹ",
+    year: "2021",
+    hours: "1 giờ 48 phút",
   },
   {
     id: 3,
     name: "Quý ông Plankton",
     type: "Phim chiếu rạp",
     banner: "./img/Quy.webp",
-    trailer: "https://www.youtube.com/watch?v=UEqjUBGjvwI&list=PPSV",
+    trailer:
+      '<iframe width="1039" height="584" src="https://www.youtube.com/embed/mt4wezFpLvA" title="Mr. Plankton | Official Trailer | Netflix EN-SUB" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
     nation: "Hàn Quốc",
+    year: "2025",
+    hours: "2 giờ 10 phút",
   },
   {
     id: 4,
     name: "Sát thủ nhân tạo 2",
     type: "Phim chiếu rạp",
     banner: "./img/sat.webp",
-    trailer: "https://www.youtube.com/watch?v=UEqjUBGjvwI&list=PPSV",
-    nation: "Việt Nam",
+    trailer:
+      '<iframe width="1039" height="584" src="https://www.youtube.com/embed/NprcHuYuP54" title="SÁT THỦ NHÂN TẠO 2 | Official Trailer | KC 01.07.2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+    nation: "Hàn",
+    year: "2022",
+    hours: "1 giờ 50 phút",
   },
   {
     id: 5,
     name: "Venom: kèo cuối",
     type: "Phim chiếu rạp",
     banner: "./img/ve.webp",
-    trailer: "https://www.youtube.com/watch?v=UEqjUBGjvwI&list=PPSV",
-    nation: "Việt Nam",
+    trailer:
+      '<iframe width="1039" height="584" src="https://www.youtube.com/embed/id1rfr_KZWg" title="Venom: Kèo cuối trailer - Dự kiến khởi chiếu 25.10.2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+    nation: "Mỹ",
+    year: "2022",
+    hours: "1 giờ 50 phút",
   },
   {
     id: 6,
@@ -243,9 +258,19 @@ let listFilm = [
 ];
 let bannerElement = document.getElementsByClassName("banner")[0];
 let imageElement = document.getElementsByClassName("im")[0];
+let trailerElement = document.getElementsByClassName("trailer")[0];
+let currentSelectedFilm = null;
+
+window.onload = function () {
+  chooseFilm(1);
+};
 
 function trailer() {
-  let trailerElement = document.getElementsByClassName("trailer")[0];
+  if (!currentSelectedFilm) {
+    chooseFilm(1);
+  }
+
+  trailerElement.innerHTML = currentSelectedFilm.trailer;
 
   bannerElement.style.display = "none";
   trailerElement.style.display = "block";
@@ -255,12 +280,16 @@ function chooseFilm(filmId) {
   let selectedFilm = listFilm.find((film) => film.id === filmId);
   // bannerElement.src = "09_68bfea5810013f0001205210.jpg";
   if (selectedFilm) {
+    currentSelectedFilm = selectedFilm;
     imageElement.src = selectedFilm.banner;
-    let typeElement = document.getElementsByClassName("type")[0];
-    let nationElement = document.getElementsByClassName("nation")[0];
 
-    typeElement.innerHTML = selectedFilm.type;
+    let nationElement = document.getElementsByClassName("nation")[0];
+    let yearElement = document.getElementsByClassName("year")[0];
+    let hoursElement = document.getElementsByClassName("hours")[0];
+
+    yearElement.innerHTML = selectedFilm.year;
     nationElement.innerHTML = selectedFilm.nation;
+    hoursElement.innerHTML = selectedFilm.hours;
   }
   // alert("hello");
 }
